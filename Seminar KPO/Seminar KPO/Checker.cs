@@ -35,9 +35,79 @@ namespace Seminar_KPO
             }
             return definedType;
         }
-        public bool IsEmpty(string str)
+        public object CreateObject(Types type, string value)
         {
-            return string.IsNullOrWhiteSpace(str);
+            object objectValue = new object();
+            if (type == Types.string_type)
+            {
+                if (value.Contains(@""""))
+                {
+                    string buf = value.Replace(@"""", "");
+                    objectValue = buf;
+                }
+                else
+                {
+                    throw new Exception("Type does not match value");
+                }
+            }
+            else if (type == Types.char_type)
+            {
+                if (value.Contains(@"'"))
+                {
+                    string buf = value.Replace("'", "");
+                    char charValue;
+                    if (char.TryParse(buf, out charValue))
+                    {
+                        objectValue = charValue;
+                    }
+                    else
+                    {
+                        throw new Exception("Type does not match value");
+                    }
+                }
+                else
+                {
+                    throw new Exception("Type does not match value");
+                }
+            }
+            else if (type == Types.bool_type)
+            {
+                bool boolValue;
+                if (bool.TryParse(value, out boolValue))
+                {
+                    objectValue = boolValue;
+                }
+                else
+                {
+                    throw new Exception("Type does not match value");
+                }
+            }
+            else if (type == Types.int_type)
+            {
+                int intValue;
+                if (int.TryParse(value, out intValue))
+                {
+                    objectValue = intValue;
+                }
+                else
+                {
+                    throw new Exception("Type does not match value");
+                }
+            }
+            else if (type == Types.float_type)
+            {
+                float floatValue;
+                if (float.TryParse(value, out floatValue))
+                {
+                    objectValue = floatValue;
+                }
+                else
+                {
+                    throw new Exception();
+                }
+            }
+
+            return objectValue;
         }
     }
 }

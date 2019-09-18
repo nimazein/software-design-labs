@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace Seminar_KPO
 {
-    class CONSTS: Identificator
+    class CONST: Identificator
     {
-        string Value{ get;set;}
+        object Value{ get;set;}
 
-        public CONSTS(string name, int hash, UsageMethods usageMethod, Types type, string value)
+        public CONST(string name, int hash, UsageMethods usageMethod, Types type, object value)
             :base(name, hash, usageMethod, type)
         {
             Value = value;
         }
+        
     }
 }

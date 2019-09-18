@@ -29,9 +29,7 @@ namespace Seminar_KPO
         public int Hash { get; set; }
         public UsageMethods UsageMethod { get; set; }
         public Types Type { get; set; }
-        public Identificator Left { get; set; }
-        public Identificator Right { get; set; }
-        public Identificator Parent { get; set; }
+
 
         public Identificator()
         {

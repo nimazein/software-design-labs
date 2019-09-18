@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Seminar_KPO
 {
-    class VARS: Identificator
+    class CLASS: Identificator
     {
-        public VARS(string name, int hash, UsageMethods usageMethod, Types type)
-            : base(name, hash, usageMethod, type)
+        public CLASS(string name, int hash, UsageMethods usageMethod, Types type)
+            :base (name, hash, usageMethod, type)
         {
 
         }

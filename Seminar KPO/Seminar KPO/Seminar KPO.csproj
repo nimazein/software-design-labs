@@ -46,14 +46,16 @@
   <ItemGroup>
     <Compile Include="BinaryTree.cs" />
     <Compile Include="Checker.cs" />
-    <Compile Include="CLASSES.cs" />
-    <Compile Include="CONSTS.cs" />
+    <Compile Include="CLASS.cs" />
+    <Compile Include="CONST.cs" />
+    <Compile Include="FileParser.cs" />
     <Compile Include="Identificator.cs" />
-    <Compile Include="METHODS.cs" />
+    <Compile Include="METHOD.cs" />
+    <Compile Include="Node.cs" />
     <Compile Include="Params.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VARS.cs" />
+    <Compile Include="VAR.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

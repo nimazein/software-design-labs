@@ -13,11 +13,11 @@ namespace Seminar_KPO
         param_ref,
         param_out,
     }
-    class METHODS: Identificator
+    class METHOD: Identificator
     {
         Params[] Arguments { get; set; }
 
-        public METHODS(string name, int hash, UsageMethods usageMethod, Types type, string arguments)
+        public METHOD(string name, int hash, UsageMethods usageMethod, Types type, string arguments)
             :base (name, hash, usageMethod, type)
         {
             Arguments = GetArgumets(arguments);
